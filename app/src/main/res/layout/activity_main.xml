@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:title="Scientific Calculator"
+        android:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:layout_marginTop="56dp">
+
+        <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#444444"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:textColor="#111111"
+            android:padding="8dp" />
+
+        <!-- Scrollable buttons in GridLayout -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <GridLayout
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="7"
+                android:alignmentMode="alignBounds"
+                android:useDefaultMargins="true">
+
+                <!-- Buttons go here (sin, cos, tan, log, numbers, etc.) -->
+                <!-- Same as in the previous code I gave you -->
+
+            </GridLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
